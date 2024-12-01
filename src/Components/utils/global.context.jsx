@@ -1,15 +1,28 @@
-import { createContext } from "react";
+import { createContext, useContext, useState } from "react";
 
-export const initialState = {theme: "", data: []}
+const ContextGlobal = createContext();
 
-export const ContextGlobal = createContext(undefined);
-
-export const ContextProvider = ({ children }) => {
+const ContextProvider = ({ children }) => {
   //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
+  const [tema, setTema] = useState("claro")
+
+  const cambiarTema = () => {
+    if (tema === "claro") {
+      setTema("oscuro");
+    } else {
+      setTema("claro");
+    }
+  }
 
   return (
-    <ContextGlobal.Provider value={{}}>
+    <ContextGlobal.Provider value={{tema, setTema, cambiarTema}}>
       {children}
     </ContextGlobal.Provider>
   );
 };
+
+export default ContextProvider
+
+
+
+export const temaState = () => useContext(ContextGlobal)

@@ -5,6 +5,7 @@ const Footer = () => {
     <footer>
         <p>Powered by</p>
         <img src="./img/DH.png" alt='DH-logo' />
+        <p>Fernando Padilla | DH - Frontend 3</p>
     </footer>
   )
 }
