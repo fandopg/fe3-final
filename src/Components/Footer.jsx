@@ -1,4 +1,3 @@
-import React from 'react'
 import dhLogo from "/images/DH.png"
 const Footer = () => {
   return (

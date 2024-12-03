@@ -1,10 +1,10 @@
 export const reducer = (state, action) => {
     switch (action.type) {
       case "cambiarTema":
-        if (state.tema === "claro") {
-                return {...state, tema: "oscuro"}
+        if (state.tema === "light") {
+                return {...state, tema: "dark"}
             } else {
-                return {...state, tema: "claro"}
+                return {...state, tema: "light"}
             }
         case "addFavs": 
             return {...state, favs: [...state.favs, action.payload]}

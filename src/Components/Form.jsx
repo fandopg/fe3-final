@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-
+import { useState } from "react";
 
 const Form = () => {
-  //Aqui deberan implementar el form completo con sus validaciones
   const [paciente, setPaciente] = useState({
     nombre: "",
     email: "",
@@ -33,9 +31,10 @@ const Form = () => {
   return (
     <div>
       {
-        mensajeOk ? (<h3>Gracias {paciente.nombre}, te contactaremos cuando antes vía mail</h3>) :
+        mensajeOk ? (<h3 className="form-ok">Gracias {paciente.nombre}, te contactaremos cuanto antes vía mail.</h3>) :
         (
           <>
+          <h2>Contáctanos!</h2>
           <p>Deja tus preguntas o comentarios y nos pondremos en contacto contigo lo antes posible.</p>
           <form onSubmit={handleSubmit}>
           <label>Nombre: </label>
@@ -55,7 +54,7 @@ const Form = () => {
           <label>Mensaje: </label>
           <textarea rows={8} onChange={(event) => setPaciente({...paciente, mensaje: event.target.value})} />
           <button type="submit">Enviar</button>
-          <p style={{color: "red"}}>{mensajeError ? "Por favor verifique su información nuevamente" : null}</p>
+          <p className="form-error">{mensajeError ? "Por favor verifique su información nuevamente" : null}</p>
          
         </form>
         </>

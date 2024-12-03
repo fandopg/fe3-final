@@ -4,10 +4,10 @@ import { reducer } from "../../reducers/reducer";
 const ContextGlobal = createContext();
 
 const localFavs = JSON.parse(localStorage.getItem("favs"))
-
+const localTema = JSON.parse(localStorage.getItem("tema"))
 
 const initialState = {
-  tema: "claro",
+  tema: localTema || "light",
   favs: localFavs || []
 }
 
@@ -16,6 +16,7 @@ const ContextProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("favs", JSON.stringify(state.favs))
+    localStorage.setItem("tema", JSON.stringify(state.tema))
   }, [state])
   
 
