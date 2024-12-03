@@ -1,11 +1,11 @@
 import React from 'react'
-
+import dhLogo from "/images/DH.png"
 const Footer = () => {
   return (
     <footer>
         <p>Powered by</p>
-        <img src="./img/DH.png" alt='DH-logo' />
-        <p>Fernando Padilla | DH - Frontend 3</p>
+        <img src={dhLogo} alt='DH-logo' />
+        <p>Fernando Padilla | Frontend 3</p>
     </footer>
   )
 }

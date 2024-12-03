@@ -7,12 +7,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.app {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  min-height: 100vh;
+  width: 80%;
+  background-color: rgb(212, 219, 215);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .oscuro {
   background-color: #717171;
 }
 
 .claro {
-  background-color: aliceblue;
+  background-color: rgb(212, 219, 215);
 }
 
 code {
@@ -32,10 +46,11 @@ h1{
 }
 
 nav{
+  background-color: rgb(172, 221, 231);
+  width: 100%;
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
-  padding: 1rem;
+  justify-content: space-evenly;
+  font-weight: bolder;
 }
 
 a{
@@ -55,7 +70,6 @@ footer {
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
   height: 40px;
   margin-top: 2rem;
 }
@@ -72,9 +86,10 @@ footer > p{
 form{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  height: 100px;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 40%;
+  height: 500px;
   margin: 0 auto;
 }
 
@@ -94,12 +109,11 @@ form{
 
 .card-grid{
   display: flex;
-  justify-content: space-evenly;
-  gap: 1rem;
-  width: 90vw;
+  justify-content: center;
+  gap: 2rem;
   height: auto;
   flex-wrap: wrap;
-  margin: 0 auto;
+  
 }
 
 table {

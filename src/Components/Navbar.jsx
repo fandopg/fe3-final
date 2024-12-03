@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { temaState } from './utils/global.context'
+import { globalState } from './utils/global.context'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 const Navbar = () => {
 
-  const {tema, cambiarTema} = temaState()
+  const {state, dispatch} = globalState()
   
   return (
     <nav>
@@ -14,7 +14,7 @@ const Navbar = () => {
       <Link to="/"><ul>HOME</ul></Link>
       <Link to="/contacto"><ul>CONTACTO</ul></Link>
       <Link to="/favoritos"><ul>FAVORITOS</ul></Link>
-      <button onClick={() => cambiarTema()}> Change theme </button>
+      <button onClick={() => dispatch({type: "cambiarTema"})}> Change theme </button>
     </nav>
   )
 }
