@@ -20,7 +20,6 @@ const Form = () => {
     ) {
       setMensajeOk(true)
       setMensajeError(false)
-      console.log(paciente);
       
     } else {
       setMensajeOk(false)

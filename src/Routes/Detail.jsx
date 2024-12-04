@@ -21,14 +21,20 @@ const Detail = () => {
     }, [])
   
   return (
-    <>
+    <div className='detail-container'>
       <h1>Detalles del dentista:</h1>
-      <h3>{dentista.name}</h3>
-      <img src={doctorImg} alt="imagen doctor" width="20%"/>
-      <h4>{dentista.email}</h4>
-      <h4>{dentista.phone}</h4>
-      <h4>{dentista.website}</h4>
-    </>
+      <div className='detail'>
+        <div>
+          <h3>{dentista.name}</h3>
+          <img src={doctorImg} alt="imagen doctor" width="20%"/>
+        </div>
+        <div>
+          <h4>✉ Email: {dentista.email}</h4>
+          <h4>📲 Telefono: {dentista.phone}</h4>
+          <h4>🌐 Website: {dentista.website}</h4>
+        </div>
+      </div>
+    </div>
   )
 }
 

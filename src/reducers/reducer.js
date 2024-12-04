@@ -8,6 +8,9 @@ export const reducer = (state, action) => {
             }
         case "addFavs": 
             return {...state, favs: [...state.favs, action.payload]}
+
+        case "deleteFavs": 
+            return {...state, favs: action.payload}
       default:
         throw new Error("Error accion no existente");
         

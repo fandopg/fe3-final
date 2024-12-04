@@ -1,16 +1,7 @@
 import { Link } from "react-router-dom";
 import doctorImg from "/images/doctor.jpg"
-import { globalState } from "./utils/global.context";
 
-
-const Card = ({dentista}) => {
-
-  const {dispatch} = globalState()
-
-  const addFavLocal = (dentista)=>{
-    dispatch({type: "addFavs", payload: dentista})
-    alert("Dentista agregado a favoritos")
-  }
+const Card = ({dentista, children}) => {
 
   return (
     <div className="card">
@@ -19,7 +10,8 @@ const Card = ({dentista}) => {
           <img src={doctorImg} alt="imagen doctor" width="100%"/>
           <h2>{dentista.username}</h2>
         </Link>
-        <button onClick={() => {addFavLocal(dentista)}}  className="favButton">Agregar a favorito</button>
+        
+        {children}
     </div>
   );
 };

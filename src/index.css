@@ -69,10 +69,29 @@ body {
   border-radius: 10px;
   width: 100%;
   cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .favButton:hover {
   background-color: rgba(56, 169, 182, 0.796);
+}
+
+.delButton {
+  background-color: crimson;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.delButton:hover {
+  background-color: rgb(254, 134, 158);
 }
 
 h1{
@@ -101,6 +120,22 @@ a{
 a:hover{
   color: rgb(136, 136, 136);
 } 
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.detail  img {
+  width: 60%;
+}
 
 footer {
   display: flex;
