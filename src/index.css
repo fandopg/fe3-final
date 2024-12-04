@@ -172,8 +172,10 @@ form{
 }
 
 .form-error {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
   font-size: large;
-  color: crimson;
+  color: rgb(240, 11, 11);
   font-weight: bold
 }
 
@@ -184,12 +186,12 @@ form{
   align-items: center;
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 1px solid rgb(136, 136, 136);
+  border: 3px solid rgb(136, 136, 136);
   background-color: var(--bg-secondary);
 }
 
 .card:hover{
-  border: 2px solid rgb(136, 136, 136);
+  border: 3px solid rgb(200, 200, 200);
 }
 
 .card-grid{

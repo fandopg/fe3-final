@@ -8,20 +8,20 @@ const Favs = () => {
   const deleteFav = (id) => {
     if (confirm("¿Esta seguro de eliminar de favoritos?")) {
       const newFavs = state.favs.filter(dentArray => dentArray.id != id)
-      dispatch({type: "deleteFavs", payload: newFavs})
+      dispatch({type: "DELETE_FAVS", payload: newFavs})
     }
   }
   
   return (
     <>
-      <h1>Dentists Favs</h1>
+      <h1>Favoritos</h1>
       <div className="card-grid">
 
       {state.favs.length != 0 ? (state.favs.map((dentista) => (
             <Card key={dentista.id} dentista={dentista}>
               <button onClick={() => {deleteFav(dentista.id)}}  className="delButton">Eliminar 🗑</button>  
              </Card>
-          )))  : <h3>Agregue favoritos desde home</h3>}      
+          ))) : <h3>Agregue favoritos desde home</h3>}      
       </div>
     </>
   );

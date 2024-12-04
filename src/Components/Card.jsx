@@ -10,7 +10,6 @@ const Card = ({dentista, children}) => {
           <img src={doctorImg} alt="imagen doctor" width="100%"/>
           <h2>{dentista.username}</h2>
         </Link>
-        
         {children}
     </div>
   );

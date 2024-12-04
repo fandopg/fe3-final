@@ -10,7 +10,7 @@ const Navbar = () => {
       <Link to="/"><ul>HOME</ul></Link>
       <Link to="/contacto"><ul>CONTACTO</ul></Link>
       <Link to="/favoritos"><ul>FAVORITOS</ul></Link>
-      <button className="theme-button" onClick={() => dispatch({type: "cambiarTema"})}> Cambiar tema {
+      <button className="theme-button" onClick={() => dispatch({type: "CHANGE_THEME"})}> Cambiar tema {
         state.tema == "dark" ? "🌛" : "🌞"
         } </button>
     </nav>
