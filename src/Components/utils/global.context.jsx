@@ -10,7 +10,8 @@ const localTema = JSON.parse(localStorage.getItem("tema"))
 const initialState = {
   dentistas: [],
   tema: localTema || "light",
-  favs: localFavs || []
+  favs: localFavs || [],
+  loading: true,
 }
 
 const ContextProvider = ({ children }) => {
@@ -21,14 +22,17 @@ const ContextProvider = ({ children }) => {
   useEffect(() => {
     axios(url).then((res) => {
       dispatch({ type: "GET_DENTIST", payload: res.data });
+      setTimeout(() => {
+        dispatch({type: "LOADING", payload: false})
+      }, 1500);
     });
   }, []);
-
+  
   useEffect(() => {
     localStorage.setItem("favs", JSON.stringify(state.favs))
     localStorage.setItem("tema", JSON.stringify(state.tema))
   }, [state])
-  
+
 
   return (
     <ContextGlobal.Provider value={{state, dispatch}}>

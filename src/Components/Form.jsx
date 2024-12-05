@@ -52,7 +52,7 @@ const Form = () => {
           />
           <label>Mensaje: </label>
           <textarea rows={8} onChange={(event) => setPaciente({...paciente, mensaje: event.target.value})} />
-          <button type="submit">Enviar</button>
+          <button className="favButton" type="submit">Enviar</button>
           <p className="form-error">{mensajeError ? "Por favor verifique su información nuevamente" : null}</p>
          
         </form>

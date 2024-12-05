@@ -9,11 +9,16 @@ export const reducer = (state, action) => {
                 } else {
                     return {...state, tema: "light"}
                 }
+
         case "ADD_FAVS": 
             return {...state, favs: [...state.favs, action.payload]}
 
         case "DELETE_FAVS": 
             return {...state, favs: action.payload}
+
+        case "LOADING":
+            return {...state, loading: action.payload}
+            
       default:
         throw new Error("Error accion no existente");
         
